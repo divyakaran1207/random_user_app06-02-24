@@ -1,30 +1,47 @@
-# React + TypeScript + Vite
+# Random User React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React application that displays the full name and email address fetched from the [Random User API](https://randomuser.me/api).
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clone the repository:**
 
-## Expanding the ESLint configuration
+    ```bash
+    git clone https://github.com/divyakaran1207/random_user_app06-02-24.git
+    ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **Navigate to the project folder:**
 
-- Configure the top-level `parserOptions` property like this:
+    ```bash
+    cd random_user_app
+    ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. **Install dependencies:**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+    ```bash
+    npm install
+    ```
+
+## Usage
+
+1. **Start the development server:**
+
+    ```bash
+    npm start
+    ```
+
+2. **Open your browser and go to [http://localhost:3000](http://localhost:3000) to view the application.**
+
+## Refreshing Data
+
+Click the "Refresh" button to fetch another user from the API.
+
+## Technologies Used
+
+- React
+- TypeScript
+- Axios (for API fetching)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
