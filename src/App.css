@@ -1,0 +1,133 @@
+:root{
+  --glowColor : #3286f5;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main{
+  height: 100vh;
+  background: black;
+}
+
+p{
+  margin: 8px 0px;
+}
+
+img{
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.btn{
+  margin-top: 15px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.btn:hover{
+  box-shadow: 0px 0px 5px var(--glowColor);
+  border: none;
+}
+
+.padding20{
+  padding: 20px;
+}
+
+.flexStart{
+  justify-content: start;
+}
+
+.borderBox{
+  position: absolute;
+  overflow: hidden; 
+  z-index: 0;
+  /* Border Radius */
+	border-radius: 10px;
+  background: white;
+}
+
+/*// Glow Border Animation //*/
+
+.animated-border-box, .animated-border-box-glow{
+  /* max-height: 200px; */
+  max-width: 100vw;
+  /* height: 100%;
+  width: 100%; */
+  width:300px;
+  height: 300px;
+  position: absolute;
+  overflow: hidden; 
+  z-index: 0;
+  /* Border Radius */
+	border-radius: 10px;
+}
+
+.animated-border-box-glow{
+  overflow: hidden;
+  /* Glow Blur */
+  filter: blur(20px);
+}
+
+.animated-border-box:before, .animated-border-box-glow:before {
+  content: '';
+  z-index: -2;
+  text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+	width: 99999px;
+	height: 99999px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+  /*border color, change middle color*/
+	background-image: conic-gradient(rgba(0,0,0,0), var(--glowColor), rgba(0,0,0,0) 25%);
+  /* change speed here */
+	animation: rotate 4s linear infinite;
+}
+
+.animated-border-box:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+  /* border width */
+	left: 5px;
+	top: 5px;
+  /* double the px from the border width left */
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+  /*bg color*/
+	background: #ffffff;
+  /*box border radius*/
+	border-radius: 7px;
+}
+
+@keyframes rotate {
+	100% {
+		transform: translate(-50%, -50%) rotate(1turn);
+	}
+}
+
+/*// Border Animation END//*/
+
+
+
+/*// Ignore This //*/
+body {
+  margin: 0px;
+}
+
+.center-box{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1D1E22;
+}
